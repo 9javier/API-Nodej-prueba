@@ -1,0 +1,71 @@
+{
+  "name": "appJavi",
+  "version": "0.0.1",
+  "description": "Micro de Avelon Services",
+  "author": [
+    "<javiergomezfelix9@gmail.com>"
+  ],
+  "main": "src/index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "mocha": {
+    "recursive": true,
+    "extension": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "scripts": {
+    "start": "ts-node ."
+  },
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.17.1",
+    "reflect-metadata": "^0.1.13",
+    "request": "^2.88.0",
+    "simple-command-bus": "^1.0.7",
+    "typeorm": "^0.2.17"
+  },
+  "devDependencies": {
+    "@sentry/node": "^5.7.0",
+    "@types/body-parser": "^1.17.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.2",
+    "@types/node": "^11.15.2",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.2.0",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.6.4"
+  }
+}
